@@ -1,0 +1,103 @@
+$grey: #191919
+$red: #FE4365
+
+body
+  background-image: image-url("body-background.png")
+  background-repeat: repeat
+  line-height: normal
+
+a
+  color: $grey
+  &:hover
+    color: $red
+    text-decoration: none
+
+
+.container
+  width: 900px
+  padding-left: 5px
+  padding-right: 5px
+  border-left: 2px solid white
+  border-right: 2px solid white
+
+.wrapper
+  background-color: white
+
+.header
+  color: $grey
+  position: relative
+  font-family: 'ChunkyFive'   
+  background-image: image-url("header-background.png")
+  background-repeat: repeat
+  height: 231px
+  border-bottom: 10px solid $grey
+  .logo
+    img 
+      height: 231px
+  .menu
+    position: absolute
+    top: -30px
+    left: 380px
+    
+    margin-top: 100px
+    margin-right: 50px
+    .title
+      font-size: 70px
+    .menu-items
+      padding-top: 5px
+      margin-top: -17px
+      margin-left: 10px
+      padding-left: 15px
+      border-left: 4px solid $grey
+      .item
+        font-size: 25px
+        
+        &:hover
+          color: $red
+
+
+.content
+  padding-top: 10px
+  padding-left: 20px
+  padding-right: 20px
+  font-family: 'OpenBaskerville'
+
+
+.category
+  margin-bottom: 20px
+  margin-right: 10px
+  img
+    height: 70px
+
+.article-thumb
+  position: relative
+  width: 840px
+  margin: auto
+  margin-top: 20px
+  .icon
+    position: absolute
+    top: -20px
+    left: -20px
+  .title
+    background-color: white
+    border-radius: 12px
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 4px
+    padding-bottom: 4px
+    position: absolute
+    top: 15px
+    left: 40px
+    font-size: 22px
+    letter-spacing: 0.5px
+    // box shadow
+    -moz-box-shadow: 3px 3px 0px 0px $grey
+    -webkit-box-shadow: 3px 3px 0px 0px $grey
+    -o-box-shadow: 3px 3px 0px 0px $grey
+    box-shadow: 3px 3px 0px 0px $grey
+    
+  .body
+    img
+      border: 5px solid $grey
+      border-top-right-radius: 20px
+      border-bottom-left-radius: 20px

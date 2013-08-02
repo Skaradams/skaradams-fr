@@ -1,0 +1,8 @@
+= simple_form_for ['admin', @article], method: method do |f|
+  = f.association :category, label_method: :identifier
+  = f.input :title
+  = f.input :picture
+  = f.input :body
+  = f.input :published
+  = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+  = f.submit
