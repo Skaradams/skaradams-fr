@@ -20,7 +20,6 @@ gem 'simple_form'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'haml'
 gem 'jquery-rails', '2.1.4'
