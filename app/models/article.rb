@@ -6,7 +6,7 @@ class Article < ActiveRecord::Base
   belongs_to :category
   has_attached_file :picture, :styles => { :thumb => "850x200#" }
 
-  validates_presence_of :title, :body, :published
+  validates_presence_of :title, :body, :published, :category_id
 
   scope :published, where(published: true)
 end
