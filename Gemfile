@@ -21,6 +21,7 @@ gem 'asset_sync'
 
 gem 'devise'
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'simple_form'
 
 gem 'haml-rails'
