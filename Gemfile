@@ -17,6 +17,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'asset_sync'
+
 gem 'devise'
 gem 'paperclip'
 gem 'simple_form'
