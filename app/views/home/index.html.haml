@@ -3,4 +3,4 @@
     .category.pull-left= image_tag("icons/#{ category.identifier }-icon.png")
 .clearfix
 
-= render partial: "articles/list", locals: { articles: @articles }
+= render @articles

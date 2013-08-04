@@ -21,8 +21,8 @@ class Admin::ArticlesController < AdminController
 
   def update
     @article = Article.friendly.find(params[:id])
-
-    if @article.update_attributes(article_parameters)
+    
+    if @article.update_attributes!(article_parameters)
       redirect_to admin_articles_path, notice: "Article modifié"
     else
       redirect_to edit_admin_article_path(@article), error: "Erreur lors de la modification"
