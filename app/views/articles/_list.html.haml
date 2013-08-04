@@ -1,0 +1,6 @@
+- @articles.each do |article|
+  .article-thumb
+    = link_to article do
+      .icon= image_tag("icons/#{ article.category.identifier }-small-icon.png")
+      .title= article.title
+      .body= image_tag article.picture(:thumb)
