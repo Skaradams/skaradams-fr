@@ -3,8 +3,8 @@ class Article < ActiveRecord::Base
   friendly_id :title, use: :slugged
   
   belongs_to :category, touch: true
-  has_attached_file :picture, :styles => { :thumb => "850x200#" }, url: "s3-eu-west-1.amazonaws.com"
-
+  has_attached_file :picture, :styles => { :thumb => "850x200#" }
+  
   validates_presence_of :title, :body, :published, :category_id
 
   default_scope order('created_at')
