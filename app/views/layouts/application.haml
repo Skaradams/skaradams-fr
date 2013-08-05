@@ -16,3 +16,13 @@
           .error= flash[:error] 
           = render partial: "admin/home/menu" if admin_controller? params
           = yield
+
+        .footer
+          .foot-wrapper
+            .pull-left.info Copyright © 2013 - 
+
+            .pull-left= link_to "Skaradams", root_path
+            .clearfix
+            .links
+              .pull-left.link= link_to image_tag('icons/twitter-icon.png'), 'http://www.twitter.com/skaradams'
+              .pull-left.link= link_to image_tag('icons/github-icon.png'), 'http://www.github.com/skaradams'            

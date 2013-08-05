@@ -1,11 +1,12 @@
 $grey: #191919
 $red: #FE4365
+$green: #83AF9B
 
 html
   height: 100%
 
 body
-  height: 100%
+  min-height: 100%
   background-image: image-url("body-background.png")
   background-repeat: repeat
   line-height: normal
@@ -82,10 +83,34 @@ h1
     height: 70px
 
 
+.footer
+  padding-top: 15px
+  .foot-wrapper
+    width: 200px
+    margin: auto
+  font-family: 'ChunkFive'
+  .info
+    margin-right: 2px
+  a
+    font-weight: bold
+
+  .links
+    width: 100px
+    margin: auto
+    .link
+      width: 30px
+      margin-left: 3px
+      margin-right: 3px
+  background-color: #EDEDED
+  border-top: 10px solid $grey
+  margin-top: 30px
+  height: 120px
+
 
 // ARTICLES
 
 .article-show
+  min-height: 100%
   .title
     .date
       margin-top: -5px
