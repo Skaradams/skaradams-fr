@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130805094204) do
+ActiveRecord::Schema.define(version: 20130805194800) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -40,9 +40,10 @@ ActiveRecord::Schema.define(version: 20130805094204) do
   add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true
 
   create_table "comments", force: true do |t|
-    t.text     "body"
-    t.integer  "commentable_id"
-    t.integer  "author_id"
+    t.integer  "owner_id",         null: false
+    t.integer  "commentable_id",   null: false
+    t.string   "commentable_type", null: false
+    t.text     "body",             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

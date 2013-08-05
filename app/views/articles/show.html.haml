@@ -5,9 +5,3 @@
     .clearfix
   .picture= image_tag @article.picture(:thumb)
   .body= @article.body.html_safe
-
-= form_for @comment do |f|
-  = f.title
-  = f.author
-  = f.body
-.comments
