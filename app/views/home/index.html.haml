@@ -1,6 +1,7 @@
 .category-filters
   - @categories.each do |category|
-    .category.pull-left= image_tag("icons/#{ category.identifier }-icon.png")
+    / .category-filter.pull-left= image_tag "icons/#{ category.identifier }-icon.png", data: { categories: array_append(params[:categories], category.slug) }
+    .category-filter.pull-left= link_to image_tag("icons/#{ category.identifier + disabled_filter?(params[:categories], category.slug) }-icon.png"), root_path(filter_params(params[:categories], category.slug))
 .clearfix
 
 = render @articles

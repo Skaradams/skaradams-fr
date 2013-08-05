@@ -1,3 +1,7 @@
-%h1= @article.title
-.picture= image_tag @article.picture(:thumb)
-.body= @article.body
+.article-show
+  .title
+    %h1= @article.title
+    %h2.pull-left.date= "publié le #{ l @article.created_at }"
+    .clearfix
+  .picture= image_tag @article.picture(:thumb)
+  .body= @article.body.html_safe

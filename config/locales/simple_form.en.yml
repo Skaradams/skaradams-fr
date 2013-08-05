@@ -1,4 +1,7 @@
 en:
+  time:
+    formats:
+      default: "%d/%m/%Y à %H:%m"
   simple_form:
     "yes": 'Yes'
     "no": 'No'

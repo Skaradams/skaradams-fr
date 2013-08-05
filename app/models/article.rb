@@ -4,9 +4,9 @@ class Article < ActiveRecord::Base
   
   belongs_to :category, touch: true
   has_attached_file :picture, :styles => { :thumb => "850x200#" }
-  
+
   validates_presence_of :title, :body, :published, :category_id
 
-  default_scope order('created_at')
+  default_scope order('articles.created_at')
   scope :published, where(published: true)
 end

@@ -3,7 +3,7 @@ Skaradams::Application.routes.draw do
 
   root 'home#index'
 
-  resources :articles, only: [:index, :show]
+  resources :articles, only: [:show]
 
   namespace :admin do
     get "/" => "home#index"
