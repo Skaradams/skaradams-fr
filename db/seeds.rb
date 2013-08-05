@@ -2,8 +2,8 @@
 
 user = User.create name: "Skaradams", 
   email: "skaradams@hotmail.com", 
-  password: "test1234", 
-  password_confirmation: "test1234"
+  password: "lakers271969", 
+  password_confirmation: "lakers271969"
 
 ["music", "games"].each do |identifier|
   Category.create identifier: identifier
