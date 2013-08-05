@@ -5,3 +5,5 @@
     .clearfix
   .picture= image_tag @article.picture(:thumb)
   .body= @article.body.html_safe
+
+= render :partial => "shared/disqus", :locals => { title: @article.title }
