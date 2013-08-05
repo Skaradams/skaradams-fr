@@ -2,6 +2,18 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+$(document).on 'page:change', (e) ->
+  trigger_events()
+
 $ ->
-  $('.category-filter').on 'click', (event) ->
-    $(this).find('img').data('categories')
+  trigger_events()
+
+trigger_events = () ->
+  $('.category-filter').on 'mouseenter', (event) ->
+    console.log('salut')
+    src = $(this).find('img').data('srcin')
+    $(this).find('img').attr('src', src)
+
+  $('.category-filter').on 'mouseleave', (event) ->
+    src = $(this).find('img').data('srcout')
+    $(this).find('img').attr('src', src)

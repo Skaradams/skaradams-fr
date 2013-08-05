@@ -22,4 +22,8 @@ module ApplicationHelper
       ''
     end
   end
+
+  def image_src_from ary, category
+    asset_path("icons/#{ category.identifier + disabled_filter?(ary, category.slug) }-icon.png")
+  end
 end
