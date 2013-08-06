@@ -7,6 +7,8 @@ Skaradams::Application.routes.draw do
 
   namespace :admin do
     get "/" => "home#index"
-    resources :articles
+    resources :articles do
+      resources :sections
+    end
   end
 end

@@ -112,7 +112,7 @@ h1
 .article-show
   min-height: 100%
   margin-bottom: 20px
-  padding-bottom: 20px
+  
   border-bottom: 2px dotted $grey
   .title
     .date
@@ -123,14 +123,26 @@ h1
     border-right: 6px solid $grey
     border-top: 1px solid $grey
     border-bottom: 1px solid $grey
-  .body
-    min-height: 100%
+  .section    
+    margin-top: 30px
+    margin-bottom: 30px
     p
       text-indent: 30px
-    font-family: 'Verdana'
-    font-size: 18px
-    letter-spacing: 1px
-    margin-top: 20px
+    .legend
+      font-size: 15px
+      font-style: italic
+      background-color: $grey
+      color: white
+      width: 842px
+      padding-left: 20px
+      padding-top: 4px
+      padding-bottom: 4px
+      text-align: center
+
+  font-family: 'Verdana'
+  font-size: 18px
+  letter-spacing: 1px
+  margin-top: 20px
 
 .article-thumb
   position: relative

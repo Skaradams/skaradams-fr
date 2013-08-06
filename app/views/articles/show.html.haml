@@ -4,6 +4,13 @@
     %h2.pull-left.date= "publié le #{ l @article.created_at }"
     .clearfix
   .picture= image_tag @article.picture(:thumb)
-  .body= @article.body.html_safe
+  - @article.sections.each do |section|
+    .section
+      - if section.picture.present?
+        .body= image_tag(section.picture(:thumb))
+        - if section.legend.present?
+          .legend= section.legend
+      - else
+        %p= section.body
 
 = render :partial => "shared/disqus", :locals => { title: @article.title }

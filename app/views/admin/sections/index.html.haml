@@ -1,0 +1,6 @@
+.new-article= link_to "Créer une nouvelle section", new_admin_article_section_path(@article)
+- @sections.each do |section|
+  .article
+    .pull-left= link_to "Section - #{section.id}", edit_admin_article_section_path(@article, section)
+    .pull-left= button_to "X", admin_article_section_path(@article, section), method: "delete", class: "btn btn-danger", confirm: "T'es sûr ?"
+    .clearfix

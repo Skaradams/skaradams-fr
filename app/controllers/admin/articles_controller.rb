@@ -11,7 +11,7 @@ class Admin::ArticlesController < AdminController
     if @article = Article.create(article_parameters)
       redirect_to admin_articles_path, notice: "Article ajouté"
     else
-      redirect_to admin_article_path(@article), error: "Erreur lors de l'ajout"
+      redirect_to edit_admin_article_path(@article), error: "Erreur lors de l'ajout"
     end
   end
 
@@ -41,6 +41,6 @@ class Admin::ArticlesController < AdminController
   private
   
   def article_parameters
-    params.require(:article).permit(:title, :body, :picture, :published, :category_id, :picture)
+    params.require(:article).permit(:title, :published, :category_id, :picture)
   end
 end
