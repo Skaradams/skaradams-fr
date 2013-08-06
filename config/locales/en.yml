@@ -26,3 +26,9 @@ en:
     music: Musique
     annonces: Annonces
     development: Développement  
+  activerecord:  
+    attributes:
+      message:
+        name: Ton nom
+        email: Ton adresse e-mail
+        body: Ton message

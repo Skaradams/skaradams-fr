@@ -12,8 +12,11 @@
           = render partial: "layouts/header"
         
         .content
-          .notice= flash[:notice]
-          .error= flash[:error] 
+          - if flash[:notice]
+            .server-message.notice= flash[:notice]
+          - if flash[:error]
+            .server-message.error= flash[:error]
+
           = render partial: "admin/home/menu" if admin_controller? params
           = yield
 

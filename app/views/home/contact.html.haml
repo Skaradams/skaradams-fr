@@ -1,0 +1,7 @@
+.contact-form
+  %h2 Envoyez-moi un message
+  = simple_form_for @message, url: send_contact_path do |f|
+    = f.input :name
+    = f.input :email
+    = f.input :body
+    .pull-right= f.submit 'Envoyer', class: 'btn btn-success'

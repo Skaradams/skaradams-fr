@@ -17,3 +17,5 @@ trigger_events = () ->
     src = $(this).find('img').data('srcout')
     $(this).find('img').attr('src', src)
   $('.category-filter').tooltip()
+  setTimeout("$('.server-message').fadeOut()", 2000);
+  
