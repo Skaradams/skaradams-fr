@@ -6,6 +6,8 @@
   .picture= image_tag @article.picture(:thumb)
   - @article.sections.each do |section|
     .section
+      - if section.title.present?
+        %h3= section.title
       - if section.picture.present?
         .body= image_tag(section.picture(:thumb))
         - if section.legend.present?
