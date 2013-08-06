@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  categories:
+    games: Jeux vidéo
+    music: Musique
+    annonces: Annonces
+    development: Développement  

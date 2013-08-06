@@ -10,10 +10,10 @@ $ ->
 
 trigger_events = () ->
   $('.category-filter').on 'mouseenter', (event) ->
-    console.log('salut')
     src = $(this).find('img').data('srcin')
     $(this).find('img').attr('src', src)
 
   $('.category-filter').on 'mouseleave', (event) ->
     src = $(this).find('img').data('srcout')
     $(this).find('img').attr('src', src)
+  $('.category-filter').tooltip()
