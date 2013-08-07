@@ -30,6 +30,7 @@ Skaradams::Application.configure do
   config.assets.compile = false
 
   # Generate digests for assets URLs.
+  config.assets.enabled = true
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
