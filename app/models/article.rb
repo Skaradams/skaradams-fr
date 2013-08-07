@@ -8,6 +8,6 @@ class Article < ActiveRecord::Base
 
   validates_presence_of :title, :category_id
 
-  default_scope order('articles.created_at ASC')
+  default_scope order('articles.created_at DESC')
   scope :published, where(published: true)
 end

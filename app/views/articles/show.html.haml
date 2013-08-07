@@ -13,6 +13,6 @@
         - if section.legend.present?
           .legend= section.legend
       - else
-        %p= section.body
+        %p= section.body.html_safe
 
 = render :partial => "shared/disqus", :locals => { title: @article.title }
