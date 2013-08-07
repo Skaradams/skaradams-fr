@@ -4,7 +4,7 @@
     %h2.pull-left.date= "publié le #{ l @article.created_at }"
     .clearfix
   .picture= image_tag @article.picture(:thumb)
-  - @article.sections.each do |section|
+  - @article.sections.order('created_at DESC').each do |section|
     .section
       - if section.title.present?
         %h3= section.title
