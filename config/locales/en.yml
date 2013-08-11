@@ -26,6 +26,8 @@ en:
     music: Musique
     annonces: Annonces
     development: Développement  
+    movies : Films et séries
+    reading: Lectures
   activerecord:  
     attributes:
       message:
