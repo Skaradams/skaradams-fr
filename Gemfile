@@ -23,6 +23,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'simple_form'
+gem 'kaminari'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.0'

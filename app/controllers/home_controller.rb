@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     if filters.present?
       @articles = @articles.includes(:category).where('categories.slug in (?)', filters)
     end
+    @articles = @articles.page params[:page]
   end
 
   def about

@@ -1,8 +1,9 @@
 .category-filters
   - @categories.each do |category|
-    / .category-filter.pull-left= image_tag "icons/#{ category.identifier }-icon.png", data: { categories: array_append(params[:categories], category.slug) }
     .category-filter.pull-left{ data: { toggle: 'tooltip', placement: 'bottom' }, title: t("categories.#{ category.identifier }") }
       = link_to image_tag(image_src_from(params[:categories], category), data: { srcout: image_src_from(params[:categories], category), srcin: asset_path("icons/#{ category.identifier }-icon.png") }), root_path(filter_params(params[:categories], category.slug))
 .clearfix
 
 = render @articles
+
+= paginate @articles
