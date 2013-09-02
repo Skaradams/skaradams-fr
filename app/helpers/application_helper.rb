@@ -26,4 +26,8 @@ module ApplicationHelper
   def image_src_from ary, category
     asset_path("icons/#{ category.identifier + disabled_filter?(ary, category.slug) }-icon.png")
   end
+
+  def is_active str, params
+    str.split('/').first == params[:controller] && str.split('/').last == params[:action]
+  end
 end
