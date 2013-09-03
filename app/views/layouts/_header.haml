@@ -2,7 +2,7 @@
 
 .menu
   .title= link_to 'SKARADAMS', root_path
-  - p params[:controller], params[:action]
+
   .menu-items
     .item= link_to 'blog', root_path, class: ("active" if is_active('home/index', params))
     .item= link_to 'qui suis-je ?', about_path, class: ("active" if is_active('home/about', params))

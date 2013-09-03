@@ -34,3 +34,11 @@ en:
         name: Ton nom
         email: Ton adresse e-mail
         body: Ton message
+
+  views:
+    pagination:
+      first: "&laquo; Début"
+      last: "Fin &raquo;"
+      previous: "&lsaquo; Page précédente"
+      next: "Page suivante &rsaquo;"
+      truncate: "..."
