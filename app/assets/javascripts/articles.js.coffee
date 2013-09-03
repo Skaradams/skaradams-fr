@@ -18,4 +18,9 @@ trigger_events = () ->
     $(this).find('img').attr('src', src)
   $('.category-filter').tooltip()
   setTimeout("$('.server-message').fadeOut()", 2000);
+
+  if window._gaq?
+    _gaq.push ['_trackPageview']
+  else if window.pageTracker?
+    pageTracker._trackPageview()
   
