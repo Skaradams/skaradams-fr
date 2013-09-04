@@ -49,6 +49,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'rails_on_heroku'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
