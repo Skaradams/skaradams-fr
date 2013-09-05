@@ -20,9 +20,10 @@ trigger_events = () ->
   setTimeout("$('.server-message').fadeOut()", 2000);
 
   _gaq = _gaq or []
-  _gaq.push ["_setAccount", "UA-XXXXX-Y"]
+  _gaq.push ["_setAccount", "UA-33339361-1"]
   _gaq.push ["_trackPageview"]
   ->
+    console.log('qsdqsqd')
     ga = document.createElement("script")
     ga.type = "text/javascript"
     ga.async = true
