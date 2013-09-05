@@ -19,8 +19,21 @@ trigger_events = () ->
   $('.category-filter').tooltip()
   setTimeout("$('.server-message').fadeOut()", 2000);
 
-  if window._gaq?
-    _gaq.push ['_trackPageview']
-  else if window.pageTracker?
-    pageTracker._trackPageview()
-  
+  _gaq = _gaq or []
+  _gaq.push ["_setAccount", "UA-XXXXX-Y"]
+  _gaq.push ["_trackPageview"]
+  ->
+    ga = document.createElement("script")
+    ga.type = "text/javascript"
+    ga.async = true
+    ga.src = ((if "https:" is document.location.protocol then "https://ssl" else "http://www")) + ".google-analytics.com/ga.js"
+    s = document.getElementsByTagName("script")[0]
+    s.parentNode.insertBefore ga, s
+
+  # if window._gaq?
+  #   console.log('do this')
+  #   _gaq.push ['_trackPageview']
+  # else if window.pageTracker?
+  #   console.log('do that')
+  #   pageTracker._trackPageview()
+  # 
