@@ -15,7 +15,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'newrelic_rpm'
+  # gem 'newrelic_rpm'
 end
 
 gem 'asset_sync'
