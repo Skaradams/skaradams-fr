@@ -23,7 +23,6 @@ trigger_events = () ->
   _gaq.push ["_setAccount", "UA-33339361-1"]
   _gaq.push ["_trackPageview"]
   ->
-    console.log('qsdqsqd')
     ga = document.createElement("script")
     ga.type = "text/javascript"
     ga.async = true
