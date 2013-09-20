@@ -5,12 +5,13 @@
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
+    = meta_tags :open_graph, :twitter
   %body
     .container
       .wrapper
         .header
           = render partial: "layouts/header"
-        
+              
         .content
           - if flash[:notice]
             .server-message.notice= flash[:notice]

@@ -51,6 +51,10 @@ end
 
 gem 'rails_on_heroku'
 
+gem 'meta_tags', git: "git://github.com/vala/meta_tags.git"
+# gem 'meta_tags', path: "/home/skaradams/work/projets/meta_tags"
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -5,6 +5,13 @@ GIT
   specs:
     friendly_id (5.0.0.alpha.1)
 
+GIT
+  remote: git://github.com/vala/meta_tags.git
+  revision: c324a976f98b9e6187b927bb738d6e74927146c5
+  specs:
+    meta_tags (0.1.0)
+      sanitize
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -154,6 +161,8 @@ GEM
       json (~> 1.4)
     ref (1.0.5)
     ruby-hmac (0.4.0)
+    sanitize (2.0.6)
+      nokogiri (>= 1.4.4)
     sass (3.2.10)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -217,6 +226,7 @@ DEPENDENCIES
   jquery-rails (= 2.1.4)
   kaminari
   less-rails
+  meta_tags!
   newrelic_rpm
   paperclip
   pg

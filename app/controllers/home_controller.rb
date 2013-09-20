@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  meta_tags_from :article
+  
   def index
     @categories = Category.all
     filters = params['categories'].split(',') rescue nil
