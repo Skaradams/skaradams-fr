@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
     type: 'blog',
     # Twitter
     site: '@skaradams',
-    card: 'summary_large_image'
+    card: 'summary'
   )
 end
