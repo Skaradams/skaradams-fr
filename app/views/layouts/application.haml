@@ -27,8 +27,9 @@
             .pull-left= link_to "Skaradams", root_path
             .clearfix
             .links
-              .pull-left.link= link_to image_tag('icons/twitter-icon.png'), 'http://www.twitter.com/skaradams'
-              .pull-left.link= link_to image_tag('icons/github-icon.png'), 'http://www.github.com/skaradams'
+              .pull-left.link= link_to image_tag('icons/twitter-icon.png'), 'http://www.twitter.com/skaradams', target: '_blank'
+              .pull-left.link= link_to image_tag('icons/facebook-icon.gif'), 'http://www.facebook.com/skaradams', target: '_blank'
+              .pull-left.link= link_to image_tag('icons/github-icon.png'), 'http://www.github.com/skaradams', target: '_blank'
 
         = render partial: 'layouts/analytics'     
     .blogroll.dropup.pull-right
