@@ -30,4 +30,12 @@
               .pull-left.link= link_to image_tag('icons/twitter-icon.png'), 'http://www.twitter.com/skaradams'
               .pull-left.link= link_to image_tag('icons/github-icon.png'), 'http://www.github.com/skaradams'
 
-        = render partial: 'layouts/analytics'            
+        = render partial: 'layouts/analytics'     
+    .blogroll.dropup.pull-right
+      %a#dLabel.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", href: request.original_url, role: "button"}
+        Blogs à suivre
+        %b.caret
+      %ul.dropdown-menu{"aria-labelledby" => "dLabel", role: "menu"}
+        - if @blogs.present?
+          - @blogs.each do |blog|
+            %li= link_to blog.name, "http://#{blog.link}", target: "_blank"       

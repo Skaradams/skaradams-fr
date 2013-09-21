@@ -15,5 +15,6 @@ Skaradams::Application.routes.draw do
     resources :articles do
       resources :sections
     end
+    resources :blogs
   end
 end

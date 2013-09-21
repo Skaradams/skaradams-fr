@@ -1,0 +1,6 @@
+.new-article= link_to "Créer un nouveau blog", new_admin_blog_path
+- @blogs.each do |blog|
+  .article
+    .pull-left= link_to blog.name, edit_admin_blog_path(blog)
+    .pull-left= button_to "X", admin_blog_path(blog), method: "delete", class: "btn btn-danger", confirm: "T'es sûr ?"
+    .clearfix

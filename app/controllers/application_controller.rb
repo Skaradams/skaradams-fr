@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
     site: '@skaradams',
     card: 'summary'
   )
+
+  before_filter do 
+    @blogs = Blog.order('blogs.position ASC')
+  end
 end
