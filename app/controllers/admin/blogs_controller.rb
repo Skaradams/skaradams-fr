@@ -16,11 +16,11 @@ class Admin::BlogsController < ApplicationController
   end
 
   def edit
-    @blog = Blog.friendly.find(params[:id])
+    @blog = Blog.find(params[:id])
   end
 
   def update
-    @blog = Blog.friendly.find(params[:id])
+    @blog = Blog.find(params[:id])
     
     if @blog.update_attributes!(blog_parameters)
       redirect_to admin_blogs_path, notice: "Blog modifié"
@@ -30,7 +30,7 @@ class Admin::BlogsController < ApplicationController
   end
 
   def destroy
-    @blog = Blog.friendly.find(params[:id])
+    @blog = Blog.find(params[:id])
     if @blog.destroy
       redirect_to admin_blogs_path, notice: "Blog supprimé"
     else
