@@ -1,10 +1,5 @@
 [User, Article, Category].each { |model| model.destroy_all }
 
-user = User.create name: "Skaradams", 
-  email: "skaradams@hotmail.com", 
-  password: "lakers271969", 
-  password_confirmation: "lakers271969"
-
 ["music", "games"].each do |identifier|
   Category.create identifier: identifier
 end
